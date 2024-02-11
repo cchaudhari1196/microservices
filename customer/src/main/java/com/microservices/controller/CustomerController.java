@@ -21,7 +21,10 @@ public class CustomerController {
     @GetMapping("/get")
     public Customer getCustomer(){
         var customer = new Customer("Chirag");
+
+        /*Instead of using RestClient. We are using declarative way i.e. AddressClient which is annoated with @FeignClient*/
         customer.setAddress(addressClient.getAddress());
+
         return customer;
     }
 }

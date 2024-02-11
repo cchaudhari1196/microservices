@@ -9,6 +9,8 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @ComponentScan
+
+/*Enabling Feign Client*/
 @EnableFeignClients
 public class CustomerMsApplication {
 
