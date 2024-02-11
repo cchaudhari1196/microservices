@@ -1,0 +1,45 @@
+fiegn in detail
+https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/
+
+Q. Differnece between Open Feign and netflix feign.
+=> Netflix developed netflix feign.
+Spring Cloud Netflix integrates the Netflix OSS offerings into the Spring Cloud ecosystem.
+This includes Feign, Eureka, Ribbon, and a host of other tools and utilities.
+However, Feign was given its own Spring Cloud Starter to allow access to just Feign.
+
+Ultimately, Netflix decided to stop using Feign internally and ceased its development.
+As a result of this decision, Netflix fully transferred (Including development and write access) Feign
+    to the open-source community under a new project named OpenFeign.
+Luckily, it continues to receive immense support from the open-source community and has seen many new features and updates.
+
+
+
+
+Q. Dependecies and differences?
+
+=> 1. Netflix feign
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-feign</artifactId>
+                <versionId>1.4.7.RELEASE</versionID>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+             this feign only works with Spring Boot 1.4.7 or earlier.
+
+      Open Feign
+            <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>4.1.0</version>
+            </dependency>
+
+
+
