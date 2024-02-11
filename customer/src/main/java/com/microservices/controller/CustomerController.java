@@ -20,7 +20,7 @@ public class CustomerController {
     @Value("${address.url}")
     private String addressUrl;
     
-    @GetMapping
+    @GetMapping("/get")
     public Customer getCustomer(){
         var customer = new Customer("Chirag");
         customer.setAddress(restTemplate.getForEntity(addressUrl, Address.class).getBody());
