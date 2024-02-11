@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/address")
 public class AddressController {
 
-    @GetMapping("get")
+    @GetMapping("/get")
     public Address getAddress(){
         return new Address(1, "Pune", "Itrends", "maharashtra");
     }
