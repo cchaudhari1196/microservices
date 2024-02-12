@@ -72,3 +72,42 @@ Q. @EnableEurekaClient VS @EnableDiscoveryClient?
 TODO - @EnableDiscoveryClient With Kubernetes.
 TODO- Authenticating with the Eureka Server
 TODO - Registering a Secure Application https://cloud.spring.io/spring-cloud-netflix/multi/multi__service_discovery_eureka_clients.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spring CLoud Load Balancer
+ /-------------------------\                                  /-------------------------------\
+|  customer(localhost:8080) |-----------call 1/3/5---------> |    Address instance 1 port-8081 |
+ \_________________________/      |                           \_______________________________/
+                                  |                            /------------------------------\
+                                  |-----call 2/4/6----------->| Address Instance 2 (port-8082) |
+                                                               \______________________________/
+
+Typically in MS architecture, When load increased we bring up
+more instances of the service.
+e.g. due to sudden 1000 users surge. We bought up 20 instances of the address service.
+No, we need to balance the request among these 20 service.
+
+We can do that using the load balancer.

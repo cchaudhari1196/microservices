@@ -12,6 +12,7 @@ public class AddressController {
 
     @GetMapping("/get")
     public Address getAddress(){
+        System.out.println("In address get");
         return new Address(1, "Pune", "Itrends", "maharashtra");
     }
 }
