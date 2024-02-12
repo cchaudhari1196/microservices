@@ -1,0 +1,11 @@
+Details in deep -
+https://spring.io/guides/gs/service-registration-and-discovery
+
+
+In Oversimplified way, eureka server will have details of all the
+MS (who registered to eureka server) in following format.
+
+    AddressMS -> http://localhost:8081, http://localhost:8082 (Bcz, Address MS has 2 instance for managing load)
+    CustomerMS -> http://localhost:8080, http://localhost:8083
+
+TODO: How to call

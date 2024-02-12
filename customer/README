@@ -43,3 +43,32 @@ Q. Dependecies and differences?
 
 
 
+
+
+
+
+
+
+
+
+
+Service Discovery Client
+
+When a client registers with Eureka, it provides meta-data about itself
+such as host, port, health indicator URL, home page, and other details.
+Eureka receives heartbeat messages from each instance belonging to a service.
+If the heartbeat fails over a configurable timetable, the instance is normally removed from the registry.
+
+Q. @EnableEurekaClient VS @EnableDiscoveryClient?
+=> Both the annotations are used to mark/make the service to register with service discovery/eureka server.
+    @EnableEurekaClient will initialize the service discovery using eureka server, its like explicitly specifying to use EUREKA
+    While @EnableDiscoveryClient will register discovery service using the jar available in classpath like consul, Eureka, Kubernetes.
+    i.e. When we are using consul for service discovery. then
+    we need to use @EnableDiscoveryClient to register the service to server.
+
+
+
+
+TODO - @EnableDiscoveryClient With Kubernetes.
+TODO- Authenticating with the Eureka Server
+TODO - Registering a Secure Application https://cloud.spring.io/spring-cloud-netflix/multi/multi__service_discovery_eureka_clients.html
