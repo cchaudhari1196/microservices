@@ -111,3 +111,5 @@ e.g. due to sudden 1000 users surge. We bought up 20 instances of the address se
 No, we need to balance the request among these 20 service.
 
 We can do that using the load balancer.
+
+They have depricated netflix ribbon load balancer. Now, we should use spring cloud load balancer.
